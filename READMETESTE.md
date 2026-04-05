@@ -1,58 +1,64 @@
 # 🤖 Projeto de Agentes Inteligentes em Grid
 
-![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk)
-![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-success?style=for-the-badge)
-![Paradigm](https://img.shields.io/badge/abordagem-simb%C3%B3lica-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/license-acad%C3%AAmico-lightgrey?style=for-the-badge)
+<p align="center">
+  <img alt="Java" src="https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk">
+  <img alt="Status" src="https://img.shields.io/badge/status-conclu%C3%ADdo-success?style=for-the-badge">
+  <img alt="Paradigma" src="https://img.shields.io/badge/abordagem-simb%C3%B3lica-blue?style=for-the-badge">
+  <img alt="Disciplina" src="https://img.shields.io/badge/Intelig%C3%AAncia-Artificial-purple?style=for-the-badge">
+</p>
 
-## 📘 Sobre o projeto
+---
 
-Este projeto apresenta a implementação, em **Java**, de diferentes **tipologias de agentes inteligentes** em um ambiente do tipo **grid n × n**.
+## 📚 Sobre o projeto
 
-A proposta foi desenvolvida para demonstrar, de forma prática, a evolução do comportamento do agente ao longo de quatro etapas, saindo de uma abordagem reativa simples até uma tomada de decisão baseada em utilidade.
+Este projeto foi desenvolvido com o objetivo de representar, de forma prática, a evolução de diferentes **tipologias de agentes inteligentes** em um ambiente simulado do tipo **grid n × n**.
+
+A implementação foi realizada em **Java**, com foco em uma **abordagem simbólica**, priorizando regras explícitas de decisão, representação do ambiente e algoritmos clássicos de busca.
+
+Ao longo da execução, o agente evolui em quatro etapas:
+
+- **Agente Reativo Simples**
+- **Agente Reativo Baseado em Modelo**
+- **Agente Baseado em Objetivos**
+- **Agente Baseado em Utilidade**
+
+Cada etapa representa um nível mais sofisticado de percepção, tomada de decisão e interação com o ambiente.
 
 ---
 
 ## 🎯 Objetivo
 
-Simular o comportamento de um robô em um grid, analisando como diferentes arquiteturas de agentes influenciam sua capacidade de:
+O principal objetivo deste projeto é demonstrar como diferentes arquiteturas de agentes influenciam o comportamento de um robô em um ambiente discreto.
 
-- perceber o ambiente;
-- tomar decisões;
-- representar informações internamente;
-- alcançar objetivos;
-- escolher soluções de menor custo.
+A proposta busca evidenciar a diferença entre:
 
----
-
-## 🧠 Etapas implementadas
-
-### 1️⃣ Agente Reativo Simples
-O agente toma decisões apenas com base na percepção atual, sem memória do ambiente.
-
-### 2️⃣ Agente Reativo Baseado em Modelo
-O agente passa a manter um estado interno, registrando células visitadas e obstáculos.
-
-### 3️⃣ Agente Baseado em Objetivos
-O agente busca encontrar um caminho válido entre uma posição inicial e uma posição final.
-
-### 4️⃣ Agente Baseado em Utilidade
-O agente escolhe, entre os caminhos possíveis, aquele com **menor custo total**.
+- agir apenas com base na percepção atual;
+- agir com apoio de memória e representação interna;
+- agir orientado a um objetivo explícito;
+- agir escolhendo a melhor alternativa com base em custo.
 
 ---
 
-## 🛠️ Tecnologias e conceitos utilizados
+## 🧠 Conceitos trabalhados
 
-- **Java**
-- **Programação orientada a objetos**
-- **Busca em largura (BFS)**
-- **Algoritmo de Dijkstra**
-- **Representação simbólica de estados**
-- **Estruturas clássicas de IA**
+Este projeto aplica conceitos fundamentais de Inteligência Artificial, como:
+
+- agentes inteligentes;
+- ambiente discreto em grid;
+- percepção e ação;
+- estado interno;
+- objetivos;
+- utilidade;
+- espaço de estados;
+- busca em largura (**BFS**);
+- caminho de menor custo com **Dijkstra**;
+- modelagem simbólica de problemas.
 
 ---
 
-## 📂 Estrutura do projeto
+## 🏗️ Estrutura do projeto
+
+A organização do código foi feita em **classes separadas**, buscando melhorar a legibilidade, a manutenção e a compreensão da responsabilidade de cada parte do sistema.
 
 ```text
 src/
@@ -64,3 +70,29 @@ src/
  ├── Etapa2AgenteBaseadoEmModelo.java
  ├── Etapa3AgenteBaseadoEmObjetivos.java
  └── Etapa4AgenteBaseadoEmUtilidade.java
+
+=== ETAPA 1: AGENTE REATIVO SIMPLES ===
+Posição inicial: (4,3)
+Robô em: (3,3)
+Robô em: (2,3)
+...
+Todas as fronteiras foram alcançadas.
+
+=== ETAPA 2: AGENTE REATIVO BASEADO EM MODELO ===
+Visitando: (1,1)
+Visitando: (1,2)
+...
+Total de células visitadas: 93
+
+=== ETAPA 3: AGENTE BASEADO EM OBJETIVOS ===
+Início: (0,2)
+Fim: (8,7)
+Caminho encontrado:
+(0,2) (0,3) (1,3) ...
+
+=== ETAPA 4: AGENTE BASEADO EM UTILIDADE ===
+Início: (0,5)
+Fim: (9,5)
+Custo total: 13
+Melhor caminho encontrado:
+(0,5) (1,5) (1,4) ...
