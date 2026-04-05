@@ -4,7 +4,6 @@
   <img alt="Java" src="https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk">
   <img alt="Status" src="https://img.shields.io/badge/status-conclu%C3%ADdo-success?style=for-the-badge">
   <img alt="Paradigma" src="https://img.shields.io/badge/abordagem-simb%C3%B3lica-blue?style=for-the-badge">
-  <img alt="Disciplina" src="https://img.shields.io/badge/Intelig%C3%AAncia-Artificial-purple?style=for-the-badge">
 </p>
 
 ---
