@@ -1,5 +1,5 @@
 # Projeto de Agentes Inteligentes em Grid
-
+Alunos: Alexsandro N, Cauan V.de Souza, Claudio S. Junior, Lucas C. Belletti, Rodrigo Amaral
 ## Sobre o projeto
 
 Este projeto foi desenvolvido com o objetivo de representar, de forma prática, a evolução de diferentes **tipologias de agentes inteligentes** em um ambiente simulado do tipo **grid n × n**.
