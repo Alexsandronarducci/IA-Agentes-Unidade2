@@ -1,14 +1,6 @@
-# 🤖 Projeto de Agentes Inteligentes em Grid
+# Projeto de Agentes Inteligentes em Grid
 
-<p align="center">
-  <img alt="Java" src="https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk">
-  <img alt="Status" src="https://img.shields.io/badge/status-conclu%C3%ADdo-success?style=for-the-badge">
-  <img alt="Paradigma" src="https://img.shields.io/badge/abordagem-simb%C3%B3lica-blue?style=for-the-badge">
-</p>
-
----
-
-## 📚 Sobre o projeto
+## Sobre o projeto
 
 Este projeto foi desenvolvido com o objetivo de representar, de forma prática, a evolução de diferentes **tipologias de agentes inteligentes** em um ambiente simulado do tipo **grid n × n**.
 
@@ -25,7 +17,7 @@ Cada etapa representa um nível mais sofisticado de percepção, tomada de decis
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 O principal objetivo deste projeto é demonstrar como diferentes arquiteturas de agentes influenciam o comportamento de um robô em um ambiente discreto.
 
@@ -38,7 +30,7 @@ A proposta busca evidenciar a diferença entre:
 
 ---
 
-## 🧠 Conceitos trabalhados
+## Conceitos trabalhados
 
 Este projeto aplica conceitos fundamentais de Inteligência Artificial, como:
 
@@ -55,7 +47,7 @@ Este projeto aplica conceitos fundamentais de Inteligência Artificial, como:
 
 ---
 
-## 🏗️ Estrutura do projeto
+## Estrutura do projeto
 
 A organização do código foi feita em **classes separadas**, buscando melhorar a legibilidade, a manutenção e a compreensão da responsabilidade de cada parte do sistema.
 
