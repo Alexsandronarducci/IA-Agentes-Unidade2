@@ -1,55 +1,145 @@
-# Projeto de Agentes Inteligentes em Grid
-Alunos: Alexsandro N, Cauan V.de Souza, Claudio S. Junior, Lucas C. Belletti, Rodrigo Amaral
-## Sobre o projeto
+# 🤖 Projeto de Agentes Inteligentes em Grid
 
-Este projeto foi desenvolvido com o objetivo de representar, de forma prática, a evolução de diferentes **tipologias de agentes inteligentes** em um ambiente simulado do tipo **grid n × n**.
-
-A implementação foi realizada em **Java**, com foco em uma **abordagem simbólica**, priorizando regras explícitas de decisão, representação do ambiente e algoritmos clássicos de busca.
-
-Ao longo da execução, o agente evolui em quatro etapas:
-
-- **Agente Reativo Simples**
-- **Agente Reativo Baseado em Modelo**
-- **Agente Baseado em Objetivos**
-- **Agente Baseado em Utilidade**
-
-Cada etapa representa um nível mais sofisticado de percepção, tomada de decisão e interação com o ambiente.
+<p align="center">
+  <img alt="Java" src="https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk">
+  <img alt="Status" src="https://img.shields.io/badge/status-conclu%C3%ADdo-success?style=for-the-badge">
+  <img alt="Paradigma" src="https://img.shields.io/badge/abordagem-simb%C3%B3lica-blue?style=for-the-badge">
+  <img alt="Disciplina" src="https://img.shields.io/badge/Intelig%C3%AAncia-Artificial-purple?style=for-the-badge">
+</p>
 
 ---
 
-## Objetivo
+## 📚 Sobre o projeto
 
-O principal objetivo deste projeto é demonstrar como diferentes arquiteturas de agentes influenciam o comportamento de um robô em um ambiente discreto.
+Este projeto foi desenvolvido para representar, de forma prática e visual, diferentes **tipologias de agentes inteligentes** em um ambiente do tipo **grid n × n**.
 
-A proposta busca evidenciar a diferença entre:
+A implementação foi feita em **Java**, utilizando uma **abordagem simbólica**, com foco em:
 
-- agir apenas com base na percepção atual;
-- agir com apoio de memória e representação interna;
-- agir orientado a um objetivo explícito;
-- agir escolhendo a melhor alternativa com base em custo.
+- representação explícita do ambiente;
+- tomada de decisão por regras;
+- exploração e busca em grid;
+- visualização da movimentação do agente em uma janela gráfica.
 
----
-
-## Conceitos trabalhados
-
-Este projeto aplica conceitos fundamentais de Inteligência Artificial, como:
-
-- agentes inteligentes;
-- ambiente discreto em grid;
-- percepção e ação;
-- estado interno;
-- objetivos;
-- utilidade;
-- espaço de estados;
-- busca em largura (**BFS**);
-- caminho de menor custo com **Dijkstra**;
-- modelagem simbólica de problemas.
+Diferente de uma versão apenas textual no console, esta versão do projeto permite acompanhar o **robô se movendo passo a passo** no ambiente, o que facilita a análise do comportamento de cada agente.
 
 ---
 
-## Estrutura do projeto
+## 🎯 Objetivo
 
-A organização do código foi feita em **classes separadas**, buscando melhorar a legibilidade, a manutenção e a compreensão da responsabilidade de cada parte do sistema.
+O principal objetivo do projeto é demonstrar como diferentes arquiteturas de agentes alteram o comportamento de um robô em um ambiente discreto.
+
+A proposta busca mostrar a diferença entre:
+
+- um agente que reage apenas ao estado atual;
+- um agente que mantém informações sobre o ambiente;
+- um agente orientado a objetivos;
+- um agente que escolhe ações com base em utilidade e custo.
+
+Além disso, o projeto também busca tornar essa evolução **visualmente compreensível**, exibindo a movimentação do robô diretamente na tela.
+
+---
+
+## 🧠 Etapas implementadas
+
+### 1️⃣ Etapa 1 — Agente Reativo Simples
+O robô nasce em uma posição aleatória **interna** do grid, ou seja, sem iniciar nas bordas.
+
+A partir dessa posição, ele segue uma sequência fixa de objetivos:
+
+- Norte
+- Leste
+- Sul
+- Oeste
+
+Nessa etapa, o agente:
+- não usa memória do ambiente;
+- não possui planejamento complexo;
+- não repete células já percorridas no trajeto principal;
+- encerra a execução após completar essa sequência.
+
+---
+
+### 2️⃣ Etapa 2 — Agente Reativo Baseado em Modelo
+Nesta etapa, o agente passa a explorar o grid fisicamente, célula por célula, sem teleportes.
+
+Ele:
+- reconhece obstáculos;
+- registra células visitadas;
+- mantém um **contador de visitas por célula**;
+- faz exploração adjacente;
+- para na **última casa efetivamente visitada**, sem retornar artificialmente ao início.
+
+Essa etapa representa um avanço importante, pois o agente já passa a utilizar um modelo interno do ambiente.
+
+---
+
+### 3️⃣ Etapa 3 — Agente Baseado em Objetivos
+Na etapa 3, o agente recebe uma posição inicial fixa e uma posição final fixa no grid.
+
+Seu objetivo é encontrar um **caminho válido** entre esses dois pontos, respeitando os obstáculos do ambiente.
+
+Nesta versão visual:
+- o robô percorre o caminho encontrado;
+- o caminho correto **não é desenhado previamente na tela**;
+- o usuário acompanha apenas o movimento do agente até o objetivo.
+
+---
+
+### 4️⃣ Etapa 4 — Agente Baseado em Utilidade
+Na etapa 4, o agente precisa encontrar o caminho de **menor custo total** entre o início e o fim.
+
+Cada célula do grid pode possuir um custo diferente, representando terrenos distintos.
+
+Essa etapa possui duas variações:
+
+#### Variação 1 — Ambiente completamente observável
+O agente conhece todos os custos do ambiente desde o início.
+
+#### Variação 2 — Ambiente parcialmente observável
+O agente vai descobrindo os custos à medida que percorre o grid.
+
+No menu principal, o usuário escolhe qual variação deseja visualizar.
+
+---
+
+## 🖥️ Visualização do projeto
+
+Uma das principais características desta versão do projeto é a **visualização gráfica da execução**.
+
+O sistema abre uma janela que exibe:
+
+- o grid;
+- os obstáculos;
+- os custos das células, quando aplicável;
+- a posição inicial;
+- a posição final;
+- o robô se movendo em tempo real;
+- a mudança de cor das células por onde o robô passou;
+- o contador de passos;
+- o contador de visitas, na etapa 2.
+
+Essa visualização torna a análise do comportamento dos agentes mais intuitiva e facilita a apresentação do trabalho.
+
+---
+
+## 🎨 Elementos visuais
+
+Durante a execução, o visualizador utiliza elementos gráficos para representar o ambiente:
+
+- **círculo laranja**: posição atual do robô;
+- **quadrados azuis escuros**: obstáculos;
+- **quadrados verdes**: células de custo 1;
+- **quadrados amarelos**: células de custo 2;
+- **quadrados vermelhos**: células de custo 3;
+- **quadrados azul-claro**: células já percorridas pelo robô;
+- **I**: posição inicial;
+- **F**: posição final.
+
+---
+
+## 🏗️ Estrutura final do projeto
+
+A estrutura atual do projeto foi organizada com foco nas versões visuais.
 
 ```text
 src/
@@ -57,33 +147,8 @@ src/
  ├── Pos.java
  ├── Node.java
  ├── GridUtils.java
- ├── Etapa1AgenteReativoSimples.java
- ├── Etapa2AgenteBaseadoEmModelo.java
- ├── Etapa3AgenteBaseadoEmObjetivos.java
- └── Etapa4AgenteBaseadoEmUtilidade.java
-
-=== ETAPA 1: AGENTE REATIVO SIMPLES ===
-Posição inicial: (4,3)
-Robô em: (3,3)
-Robô em: (2,3)
-...
-Todas as fronteiras foram alcançadas.
-
-=== ETAPA 2: AGENTE REATIVO BASEADO EM MODELO ===
-Visitando: (1,1)
-Visitando: (1,2)
-...
-Total de células visitadas: 93
-
-=== ETAPA 3: AGENTE BASEADO EM OBJETIVOS ===
-Início: (0,2)
-Fim: (8,7)
-Caminho encontrado:
-(0,2) (0,3) (1,3) ...
-
-=== ETAPA 4: AGENTE BASEADO EM UTILIDADE ===
-Início: (0,5)
-Fim: (9,5)
-Custo total: 13
-Melhor caminho encontrado:
-(0,5) (1,5) (1,4) ...
+ ├── JanelaGrid.java
+ ├── Etapa1Visual.java
+ ├── Etapa2Visual.java
+ ├── Etapa3Visual.java
+ └── Etapa4Visual.java
