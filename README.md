@@ -1,15 +1,9 @@
-# 🤖 Projeto de Agentes Inteligentes em Grid
+# Projeto de Agentes Inteligentes em Grid
 
-<p align="center">
-  <img alt="Java" src="https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk">
-  <img alt="Status" src="https://img.shields.io/badge/status-conclu%C3%ADdo-success?style=for-the-badge">
-  <img alt="Paradigma" src="https://img.shields.io/badge/abordagem-simb%C3%B3lica-blue?style=for-the-badge">
-  <img alt="Disciplina" src="https://img.shields.io/badge/Intelig%C3%AAncia-Artificial-purple?style=for-the-badge">
-</p>
 
 ---
 
-## 📚 Sobre o projeto
+## Sobre o projeto
 
 Este projeto foi desenvolvido para representar, de forma prática e visual, diferentes **tipologias de agentes inteligentes** em um ambiente do tipo **grid n × n**.
 
@@ -24,7 +18,7 @@ Diferente de uma versão apenas textual no console, esta versão do projeto perm
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 O principal objetivo do projeto é demonstrar como diferentes arquiteturas de agentes alteram o comportamento de um robô em um ambiente discreto.
 
@@ -39,9 +33,9 @@ Além disso, o projeto também busca tornar essa evolução **visualmente compre
 
 ---
 
-## 🧠 Etapas implementadas
+## Etapas implementadas
 
-### 1️⃣ Etapa 1 — Agente Reativo Simples
+### Etapa 1 — Agente Reativo Simples
 O robô nasce em uma posição aleatória **interna** do grid, ou seja, sem iniciar nas bordas.
 
 A partir dessa posição, ele segue uma sequência fixa de objetivos:
@@ -59,7 +53,7 @@ Nessa etapa, o agente:
 
 ---
 
-### 2️⃣ Etapa 2 — Agente Reativo Baseado em Modelo
+### Etapa 2 — Agente Reativo Baseado em Modelo
 Nesta etapa, o agente passa a explorar o grid fisicamente, célula por célula, sem teleportes.
 
 Ele:
@@ -73,7 +67,7 @@ Essa etapa representa um avanço importante, pois o agente já passa a utilizar 
 
 ---
 
-### 3️⃣ Etapa 3 — Agente Baseado em Objetivos
+### Etapa 3 — Agente Baseado em Objetivos
 Na etapa 3, o agente recebe uma posição inicial fixa e uma posição final fixa no grid.
 
 Seu objetivo é encontrar um **caminho válido** entre esses dois pontos, respeitando os obstáculos do ambiente.
@@ -85,7 +79,7 @@ Nesta versão visual:
 
 ---
 
-### 4️⃣ Etapa 4 — Agente Baseado em Utilidade
+### Etapa 4 — Agente Baseado em Utilidade
 Na etapa 4, o agente precisa encontrar o caminho de **menor custo total** entre o início e o fim.
 
 Cada célula do grid pode possuir um custo diferente, representando terrenos distintos.
@@ -102,7 +96,7 @@ No menu principal, o usuário escolhe qual variação deseja visualizar.
 
 ---
 
-## 🖥️ Visualização do projeto
+## Visualização do projeto
 
 Uma das principais características desta versão do projeto é a **visualização gráfica da execução**.
 
@@ -122,7 +116,7 @@ Essa visualização torna a análise do comportamento dos agentes mais intuitiva
 
 ---
 
-## 🎨 Elementos visuais
+## Elementos visuais
 
 Durante a execução, o visualizador utiliza elementos gráficos para representar o ambiente:
 
@@ -137,7 +131,7 @@ Durante a execução, o visualizador utiliza elementos gráficos para representa
 
 ---
 
-## 🏗️ Estrutura final do projeto
+## Estrutura final do projeto
 
 A estrutura atual do projeto foi organizada com foco nas versões visuais.
 
