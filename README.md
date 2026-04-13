@@ -1,5 +1,15 @@
 # Projeto de Agentes Inteligentes em Grid
 
+Disciplina: Inteligência Artificial
+Curso: Sistemas de Informação — FURB
+Prof.: Maiko Spiess
+
+Alunos:
+Alexesandro Narducci
+Cauan V. de Souza
+Claudio S. Junior
+Lucas Belletti
+Rodrigo Amaral
 
 ---
 
