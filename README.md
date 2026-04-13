@@ -1,7 +1,9 @@
 # Projeto de Agentes Inteligentes em Grid
 
 Disciplina: Inteligência Artificial
+
 Curso: Sistemas de Informação — FURB
+
 Prof.: Maiko Spiess
 
 Alunos:
